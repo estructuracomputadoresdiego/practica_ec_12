@@ -3,12 +3,14 @@
 #include <string.h>
 
 void quitaespacios(char *cadena, char *cadenasin);
-void quitaespacios(char *cadena, char *cadenasin){
 
+void quitaespacios(char *cadena, char *cadenasin){
+ 
+	int j = 0;
 	for (int i = 0; i < strlen(cadena); ++i){
-		int j = 0;
-		if (cadena[i] != ' '){
-			cadenasin[j] = cadena[i];
+
+		if (cadena[i] != ' ' && cadena[i] != '\n'){
+			cadenasin[j] = (char)cadena[i];
 			j++;
 		}
 	}
