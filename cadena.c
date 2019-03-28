@@ -11,7 +11,7 @@ void quitaespacios(char *cadena, char *cadenasin){
 
 		if (cadena[i] != ' ' && cadena[i] != '\n'){
 			cadenasin[j] = (char)cadena[i];
-			j++;
+			++j;
 		}
 	}
 }
@@ -30,6 +30,9 @@ int main(int argc, char const *argv[])
 	quitaespacios(cadena, cadenasin);
 
 	printf("%s\n", cadenasin);
+
+	free(cadena);
+	free(cadenasin);
 
 	return 0;
 }
