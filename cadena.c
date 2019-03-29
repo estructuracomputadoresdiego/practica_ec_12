@@ -16,16 +16,22 @@ void quitaespacios(char *cadena, char *cadenasin){
 	}
 }
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]){
+
+	int longitud;
+
+	printf("Introduzca la longitud de la cadena\n");
+	scanf("%d", &longitud);
+
 	char* cadena;
-	cadena = (char*)malloc(sizeof(char)*100);
+	cadena = (char*)malloc(sizeof(char)*longitud);
 
 	char* cadenasin;
-	cadenasin = (char*)malloc(sizeof(char)*100);
+	cadenasin = (char*)malloc(sizeof(char)*longitud);
 
 	printf("Introduzca una cadena\n");
 	fgets(cadena, 100, stdin);
+	fgets(cadena, longitud, stdin);
 
 	quitaespacios(cadena, cadenasin);
 
